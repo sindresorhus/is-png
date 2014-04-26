@@ -27,7 +27,7 @@ $ component install sindresorhus/is-png
 ```js
 var readChunk = require('read-chunk'); // npm install read-chunk
 var isPng = require('is-png');
-var buffer = readChunk('unicorn.png', 0, 4);
+var buffer = readChunk.sync('unicorn.png', 0, 4);
 
 isPng(buffer);
 //=> true
