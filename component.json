@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Check if a Buffer/Uint8Array is a PNG image",
   "license": "MIT",
-  "repo": "sindresorhus/is-png",
+  "repository": "sindresorhus/is-png",
   "scripts": [
     "index.js"
   ],
