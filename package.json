@@ -13,8 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha",
-    "browser": "browserify -s $npm_package_name -o browser.js ."
+    "test": "mocha"
   },
   "files": [
     "index.js"
@@ -39,8 +38,7 @@
     "uint8array"
   ],
   "devDependencies": {
-    "browserify": "^3.0.0",
     "mocha": "*",
-    "read-chunk": "^0.1.0"
+    "read-chunk": "^1.0.0"
   }
 }
