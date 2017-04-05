@@ -4,7 +4,7 @@ var readChunk = require('read-chunk');
 var isPng = require('./');
 
 function check(filename) {
-	return isPng(readChunk.sync(filename, 0, 4));
+	return isPng(readChunk.sync(filename, 0, 8));
 }
 
 it('should detect PNG from Buffer', function () {
