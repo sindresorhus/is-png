@@ -8,7 +8,7 @@ Used by [image-type](https://github.com/sindresorhus/image-type).
 ## Install
 
 ```sh
-$ npm install --save is-png
+$ npm install is-png
 ```
 
 
@@ -17,9 +17,9 @@ $ npm install --save is-png
 ##### Node.js
 
 ```js
-var readChunk = require('read-chunk'); // npm install read-chunk
-var isPng = require('is-png');
-var buffer = readChunk.sync('unicorn.png', 0, 8);
+const readChunk = require('read-chunk'); // npm install read-chunk
+const isPng = require('is-png');
+const buffer = readChunk.sync('unicorn.png', 0, 8);
 
 isPng(buffer);
 //=> true
@@ -28,16 +28,13 @@ isPng(buffer);
 ##### Browser
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'unicorn.png');
-xhr.responseType = 'arraybuffer';
+(async () => {
+	const response = await fetch('unicorn.png');
+	const buffer = await response.arrayBuffer();
 
-xhr.onload = function () {
-	isPng(new Uint8Array(this.response));
+	isPng(new Uint8Array(buffer));
 	//=> true
-};
-
-xhr.send();
+})();
 ```
 
 
@@ -45,11 +42,13 @@ xhr.send();
 
 ### isPng(buffer)
 
-Accepts a Buffer (Node.js) or Uint8Array.
+Accepts a Buffer (Node.js) or Uint8Array. Returns a `boolean` of whether `buffer` contains a PNG image.
 
-It only needs the first 8 bytes.
+#### buffer
+
+The buffer to check. It only needs the first 8 bytes.
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
