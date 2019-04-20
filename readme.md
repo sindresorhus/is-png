@@ -1,13 +1,11 @@
 # is-png [![Build Status](https://travis-ci.org/sindresorhus/is-png.svg?branch=master)](https://travis-ci.org/sindresorhus/is-png)
 
-> Check if a Buffer/Uint8Array is a [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics) image
-
-Used by [image-type](https://github.com/sindresorhus/image-type).
+> Check if a Buffer/Uint8Array is a [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) image
 
 
 ## Install
 
-```sh
+```
 $ npm install is-png
 ```
 
@@ -42,11 +40,16 @@ isPng(buffer);
 
 ### isPng(buffer)
 
-Accepts a Buffer (Node.js) or Uint8Array. Returns a `boolean` of whether `buffer` contains a PNG image.
+Accepts a Buffer (Node.js) or Uint8Array. Returns a `boolean` of whether `buffer` is a PNG image.
 
 #### buffer
 
 The buffer to check. It only needs the first 8 bytes.
+
+
+## Related
+
+- [file-type](https://github.com/sindresorhus/file-type) - Detect the file type of a Buffer/Uint8Array/ArrayBuffer
 
 
 ## License

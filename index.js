@@ -6,13 +6,13 @@ module.exports = buffer => {
 	}
 
 	return (
-		buffer[0] === 137 &&
-		buffer[1] === 80 &&
-		buffer[2] === 78 &&
-		buffer[3] === 71 &&
-		buffer[4] === 13 &&
-		buffer[5] === 10 &&
-		buffer[6] === 26 &&
-		buffer[7] === 10
+		buffer[0] === 0x89 &&
+		buffer[1] === 0x50 &&
+		buffer[2] === 0x4E &&
+		buffer[3] === 0x47 &&
+		buffer[4] === 0x0D &&
+		buffer[5] === 0x0A &&
+		buffer[6] === 0x1A &&
+		buffer[7] === 0x0A
 	);
 };

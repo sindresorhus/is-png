@@ -1,7 +1,7 @@
 /// <reference types="node"/>
 
 /**
-Check if a Buffer/Uint8Array is a [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics) image.
+Check if a Buffer/Uint8Array is a [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) image.
 
 @param buffer - The buffer to check. It only needs the first 8 bytes.
 @returns Whether `buffer` contains a PNG image.
@@ -9,7 +9,7 @@ Check if a Buffer/Uint8Array is a [PNG](http://en.wikipedia.org/wiki/Portable_Ne
 @example
 ```
 // Node.js:
-import readChunk = require('read-chunk'); // npm install read-chunk
+import readChunk = require('read-chunk');
 import isPng = require('is-png');
 
 const buffer = readChunk.sync('unicorn.png', 0, 8);
