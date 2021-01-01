@@ -1,4 +1,4 @@
-# is-png [![Build Status](https://travis-ci.org/sindresorhus/is-png.svg?branch=master)](https://travis-ci.org/sindresorhus/is-png)
+# is-png
 
 > Check if a Buffer/Uint8Array is a [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) image
 
