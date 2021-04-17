@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = buffer => {
+export default function isPng(buffer) {
 	if (!buffer || buffer.length < 8) {
 		return false;
 	}
@@ -15,4 +13,4 @@ module.exports = buffer => {
 		buffer[6] === 0x1A &&
 		buffer[7] === 0x0A
 	);
-};
+}

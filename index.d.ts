@@ -1,5 +1,3 @@
-/// <reference types="node"/>
-
 /**
 Check if a Buffer/Uint8Array is a [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) image.
 
@@ -9,8 +7,8 @@ Check if a Buffer/Uint8Array is a [PNG](https://en.wikipedia.org/wiki/Portable_N
 @example
 ```
 // Node.js:
-import readChunk = require('read-chunk');
-import isPng = require('is-png');
+import readChunk from 'read-chunk';
+import isPng from 'is-png';
 
 const buffer = readChunk.sync('unicorn.png', 0, 8);
 
@@ -18,15 +16,13 @@ isPng(buffer);
 //=> true
 
 // Browser:
-(async () => {
-	const response = await fetch('unicorn.png');
-	const buffer = await response.arrayBuffer();
+import readChunk from 'read-chunk';
 
-	isPng(new Uint8Array(buffer));
-	//=> true
-})();
+const response = await fetch('unicorn.png');
+const buffer = await response.arrayBuffer();
+
+isPng(new Uint8Array(buffer));
+//=> true
 ```
 */
-declare function isPng(buffer: Uint8Array | Buffer): boolean;
-
-export = isPng;
+export default function isPng(buffer: Uint8Array | Buffer): boolean;

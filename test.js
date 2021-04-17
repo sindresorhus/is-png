@@ -1,6 +1,6 @@
 import test from 'ava';
 import readChunk from 'read-chunk';
-import isPng from '.';
+import isPng from './index.js';
 
 const check = filename => isPng(readChunk.sync(filename, 0, 8));
 

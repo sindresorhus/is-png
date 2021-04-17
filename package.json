@@ -4,13 +4,16 @@
 	"description": "Check if a Buffer/Uint8Array is a PNG image",
 	"license": "MIT",
 	"repository": "sindresorhus/is-png",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
+	"exports": "./index.js",
 	"engines": {
-		"node": ">=8"
+		"node": ">=12"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -37,10 +40,10 @@
 		"uint8array"
 	],
 	"devDependencies": {
-		"@types/node": "^11.13.5",
-		"ava": "^1.4.1",
+		"@types/node": "^14.14.41",
+		"ava": "^3.15.0",
 		"read-chunk": "^3.2.0",
-		"tsd": "^0.7.2",
-		"xo": "^0.24.0"
+		"tsd": "^0.14.0",
+		"xo": "^0.38.2"
 	}
 }
