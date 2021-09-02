@@ -1,4 +1,4 @@
-/// <reference lib="dom"/>
+import {Buffer} from 'node:buffer';
 import {expectType} from 'tsd';
 import isPng from './index.js';
 

@@ -13,10 +13,10 @@ $ npm install is-png
 ##### Node.js
 
 ```js
-import readChunk from 'read-chunk'; // npm install read-chunk
+import {readChunk} from 'read-chunk';
 import isPng from 'is-png';
 
-const buffer = readChunk.sync('unicorn.png', 0, 8);
+const buffer = await readChunk('unicorn.png', {length: 8});
 
 isPng(buffer);
 //=> true
